@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Profile - CIMB</title>
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="../views/assets/modules/bootstrap-5.1.3/css/bootstrap.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../views/assets/css/style.css">
+    <!-- FontAwesome CSS-->
+    <link rel="stylesheet" href="../views/assets/modules/fontawesome6.1.1/css/all.css">
+    <!-- Boxicons CSS-->
+    <link rel="stylesheet" href="../views/assets/modules/boxicons/css/boxicons.min.css">
+    <!-- ICON -->
+    <link rel="icon" type="icon" href="../Images/logo_cim.png">
+</head>
+
+<body>
+
+    <!--Topbar -->
+    <div class="topbar transition">
+        <div class="bars">
+            <button type="button" class="btn transition" id="sidebar-toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="menu">
+            <ul>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="/views/assets/images/avatar/avatar-1.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/users/edit_profile"><i class="fa fa-cog size-icon-1"></i>
+                            <span>Paramètres</span></a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#"><i class="fa fa-sign-out-alt  size-icon-1"></i> <span>Se
+                                Déconnecter</span></a>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Sidebar-->
+    <div class="sidebar transition overlay-scrollbars animate__animated  animate__slideInLeft">
+        <div class="sidebar-content">
+            <div id="sidebar">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <center>
+                        <img src="../Icons/CIMB.png" style="width: 150px; height:140px">
+                    </center>
+                </div>
+
+                <ul class="side-menu">
+                    <li>
+                        <a href="/users/index" class="active">
+                            <i class='bx bxs-dashboard icon'></i> Statistiques
+                        </a>
+                    </li>
+
+                    <!-- Divider-->
+                    <li class="divider" data-text="STARTER">Actualités</li>
+
+                    <li>
+                        <a href="/users/home">
+                            <i class='bx bxs-home icon'></i>
+                            Accueil
+                        </a>
+                    </li>
+
+                    <!-- Divider-->
+                    <li class="divider" data-text="Atrana">Extra</li>
+                    <li>
+                        <a href="/users/fiche">
+                            <i class='bx bxs-notepad icon'></i>
+                            Fiche De Paie
+                        </a>
+                    <li>
+                        <a href="/users/infos_societe">
+                            <i class='bx bxs-data icon'></i>
+                            Informations Du Société
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-user icon'></i>
+                            Profile
+                            <i class='bx bx-chevron-right icon-right'></i>
+                        </a>
+                        <ul class="side-dropdown">
+                            <li><a href="/users/edit_profile">Editer Profile</a></li>
+                            <li><a href="/users/des_profile">Désactiver Le Compte</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="/users/help">
+                            <i class='bx bxs-hand icon'></i>
+                            Aide
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" style="color: #ff8080;">
+                            <i class='bx bxs-log-out icon'></i>
+                            Se Déconnecter
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="ads">
+                    <div class="wrapper">
+                        <div class="help-icon"><i class="fa fa-circle-question fa-3x"></i></div>
+                        <p>Besoin D'aide Avec <strong>CIMB</strong>?</p>
+                        <a href="/users/contact" class="btn-upgrade">Contactez-Nous</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div><!-- End Sidebar-->
+
+
+    <div class="sidebar-overlay"></div>
+
+    <!--Content Start-->
+    <div class="content-start transition">
+        <div class="container-fluid dashboard">
+            <div class="content-header">
+                <h4>Bonjour , <%= name %> !</h4>
+                <br><br>
+                <br>
+            </div>
+
+            <div class="card">
+                <h5 class="card-header">Désactiver Le Compte</h5>
+                <div class="card-body">
+                    <div class="mb-3 col-12 mb-0">
+                        <div class="alert alert-warning">
+                            <h6 class="alert-heading fw-bold mb-1">Êtes-vous Sûr De Vouloir Désactiver Votre Compte ?
+                            </h6>
+                            <p class="mb-0">Une Fois Que Vous Désactiver Votre Compte, Il N'y A Pas De Retour En
+                                Arrière.
+                                Soyez Certain.</p>
+                        </div>
+                    </div>
+                    <form method="POST" accept="my-profile.html">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" name="accountActivation"
+                                id="accountActivation" />
+                            <label class="form-check-label" for="accountActivation">
+                                Je Confirme La Désactivation De Mon Compte</label>
+                        </div>
+                        <button type="submit" class="btn btn-danger deactivate-account">Désactiver Mon Compte</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </div> <!-- End Container -->
+    </div><!-- End Content -->
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="float-start">
+                <p>2022 &copy; CIMB</p>
+            </div>
+            <div class="float-end">
+                <p>Crafted with
+                    <span class="text-danger">
+                        <i class="fa fa-heart"></i> by
+                        <a href="https://www.facebook.com/andreew.co.id/" class="author-footer">&nbsp;
+                            Brahim & Yassin
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Preloader -->
+    <div class="loader">
+        <div class="spinner-border text-light" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Loader -->
+    <div class="loader-overlay"></div>
+
+    <!-- JS Libraies -->
+    <script src="../views/assets/modules/jquery/jquery.min.js"></script>
+    <script src="../views/assets/modules/bootstrap-5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="../views/assets/modules/popper/popper.min.js"></script>
+
+    <!-- Template JS File -->
+    <script src="../views/assets/js/script.js"></script>
+
+</body>
+
+</html>
